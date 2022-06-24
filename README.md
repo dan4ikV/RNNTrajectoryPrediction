@@ -11,8 +11,8 @@ charges. The trajectory data is provided in form of a sequence of
 positions of each of the particles in the space with a fixed time step
 between those positions. Formally the data-set contains the initial
 trajectory data, with each data point being a trajectory
-$D = \{\textbf{x}_1, \textbf{x}_2 ... \textbf{x}_n\}$, where
-$\textbf{x}_t \textbf{R}^2$ is a coordinates of particle in the 2D
+$D = \{\textbf{x}_1, \textbf{x}_2 ... \textbf{x}_n\}$, where $\textbf{x}_t \textbf{R}^{2}$ 
+is a coordinates of particle in the 2D
 space at time $t$. The labels for each data-point are given in form
 $T = \{c_1, c_2, c_3\}$, where $c_1, c_2$ and $c_3$ are the
 corresponding charges.
