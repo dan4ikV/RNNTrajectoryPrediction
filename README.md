@@ -42,9 +42,7 @@ Problem formulation
 The goal of the task is, given the $100\pm10$ steps of initial
 simulation, predict the continuation of the $40\pm20$ steps. The input
 data is the same as in assignment 3.1, however the ground truth for
-output data contains the continuation of the particles trajectory:
-$D_c = \{\textbf{x}_{n+1}, \textbf{x}_{n+2} ... \textbf{x}_{n+m}\}$,
-where $n$ is the length of the input sequence in steps, $m$ is the
+output data contains the continuation of the particles trajectory: $D_c = \{**x_{n+1}**, **x_{n+2}** ... **x_{n+m}**\}$ where $n$ is the length of the input sequence in steps, $m$ is the
 length of the output sequence in steps and
 $\textbf{x}_t \in \mathbf{R}^2$ is the position of the particle in 2D
 space at time $t$.
@@ -80,8 +78,10 @@ look at the difference between their velocities. That way, we would
 incorporate some more logic of the simulation into the network, and help
 the network, by decreasing the loss function, if the two trajectories
 are relatively distant, but they're velocities match, which means, their
-shape is similar. We can approximate the velocity at time $t$ by $v_t = \textbf{y}_t}$ and therefore have the
-following formula for loss: $$L = \frac{\sum_{t=0}^{N} |\textbf{y}_t - \hat{\textbf{y}}_t| + \sum_{i=0}^{N} |(\textbf{y}_t - \textbf{y}_{t-1}) - (\hat{\textbf{y}}_{t} - \hat{\textbf{y}}_{t-1})|}{2N}$$
+shape is similar. We can approximate the velocity at time $t$ by $v_t = y_t - y_{t-1}$ and therefore have the
+following formula for loss: 
+
+$$L = {\sum_{t=0}^{N} |**y_t** - **\hat{y}_t** | + \sum_{i=0}^{N} |(**y_t** - **y_{t-1}**) - (**\hat{y}_t** - **\hat{y}_{t-1}**)|}\over{2N}$$
 
 This loss is less interpret-able and is not suitable for using as a
 performance metric of the Neural Network. However, supposedly, is more
