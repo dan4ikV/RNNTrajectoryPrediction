@@ -80,7 +80,7 @@ look at the difference between their velocities. That way, we would
 incorporate some more logic of the simulation into the network, and help
 the network, by decreasing the loss function, if the two trajectories
 are relatively distant, but they're velocities match, which means, their
-shape is similar. We can approximate the velocity at time $t$ by $v_t = \textbf{y}_t - \textbf{y}_{t-1}$ , and therefore have the
+shape is similar. We can approximate the velocity at time $t$ by $v_t = \textbf{y}_t}$ and therefore have the
 following formula for loss: $$L = \frac{\sum_{t=0}^{N} |\textbf{y}_t - \hat{\textbf{y}}_t| + \sum_{i=0}^{N} |(\textbf{y}_t - \textbf{y}_{t-1}) - (\hat{\textbf{y}}_{t} - \hat{\textbf{y}}_{t-1})|}{2N}$$
 
 This loss is less interpret-able and is not suitable for using as a
