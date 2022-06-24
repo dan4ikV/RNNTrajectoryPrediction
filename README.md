@@ -6,14 +6,14 @@ Problem formulation
 
 The goal of the problem is to predict the charges $c_1, c_2$ and $c_3$
 of the particles with a fixed position given the trajectory of other
-particle moving in the 2D space which depend on the above-mentioned
+particle moving in the 2D space which depend on the abovementioned
 charges. The trajectory data is provided in form of a sequence of
 positions of each of the particles in the space with a fixed time step
-between those positions. Formally the data-set contains the initial
+between those positions. Formally the dataset contains the initial
 trajectory data, with each data point being a trajectory
 $D = \{\textbf{x}_1, \textbf{x}_2 ... \textbf{x}_n\}$, where $\textbf{x}_t \in \textbf{R}^2$ 
 is a coordinates of particle in the 2D
-space at time $t$. The labels for each data-point are given in form
+space at time $t$. The labels for each datapoint are given in form
 $T = \{c_1, c_2, c_3\}$, where $c_1, c_2$ and $c_3$ are the
 corresponding charges.
 
@@ -21,7 +21,7 @@ The problem described is a supervised learning problem. Based on the
 given sequence, and the corresponding label we have to perform a
 sequence classification. Classification, is because even though the
 output data contains a couple data points, they are not sequential and
-independent of each-other so all can be viewed all can be represented as
+independent of eachother so all can be viewed all can be represented as
 a single prediction.
 
 To evaluate the model, we will simply use the L1 loss, which is simply
@@ -30,7 +30,7 @@ data: $$L = \sum_{i=0}^{N} |y - \hat{y}|$$ where $y$ is the ground truth
 $\hat{y}$ is the predicted values and $N$ size of the prediction (in our
 case 3 charges).
 
-The above loss function, is also easily interpret-able, and could be
+The above loss function, is also easily interpretable, and could be
 used as measure of the model performance.
 
 Task 2
